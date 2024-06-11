@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torsional Pendulum Experiment</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <center><div class="containo">
+        <div class="card shadow-sm p-4 rounded-4 text-light">
+           <center> <h1 class="text-center mb-4">Torsional Pendulum Experiment</h1>
+            <img src="Assets/TP.gif" height="160"><br>
+            <form id="pendulumForm">
+                <div class="form-group mt-4">
+                    <br><br><label for="observations" class="form-label">No. of observations performed:</label><br><br>
+                    <input type="number" class="form-control" id="observations" name="observations" required>
+                </div><br><br>
+                <div id="pendulumInputs"></div>
+                <div class="form-group mb-3">
+                    <label for="zeroError" class="form-label">Enter the Zero Error Observed:</label><br><br>
+                    <input type="number" step="any" class="form-control" id="zeroError" name="zeroError" required>
+                </div><br><br>
+                <div class="form-group mb-3">
+                    <label for="readings" class="form-label">No. of Readings:</label><br><br>
+                    <input type="number" class="form-control" id="readings" name="readings" required>
+                </div><br><br>
+                <div id="readingInputs"></div>
+                <button type="button" class="btn btn-primary w-100 mt-3" onclick="main()">Calculate</button>
+            </form>
+            <pre id="output" class="mt-4 p-3 bg-secondary border rounded-3 text-light"></pre>
+        </div>
+    </center>
+    </div>
+</center>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
